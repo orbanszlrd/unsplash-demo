@@ -10,13 +10,15 @@ export interface PhotoProps {
 const Photo: FunctionComponent<PhotoProps> = ({ photo }) => {
   return (
     <article className={styles.item}>
-      <div
-        className={styles.cover}
-        title={photo.description ?? photo.alt_description ?? ''}
-        style={{
-          backgroundImage: `url(${photo.urls.regular})`,
-        }}
-      ></div>
+      <a href={photo.links.html} target="_blank" rel="noreferrer">
+        <div
+          className={styles.cover}
+          title={photo.description ?? photo.alt_description ?? ''}
+          style={{
+            backgroundImage: `url(${photo.urls.regular})`,
+          }}
+        ></div>
+      </a>
       <div className={styles.credits}>
         Photo by{' '}
         <a href={photo.user.links.html} target="_blank" rel="noreferrer">
