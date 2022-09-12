@@ -1,0 +1,34 @@
+.item {
+    border-radius: 0.5rem;
+    border-width: 2px;
+  }
+  
+  .cover {
+    position: relative;
+    margin: auto;
+    padding-bottom: 100%;
+    border-radius: 0.3rem;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 1;
+    transition: all 0.2s linear;
+  }
+  
+  .cover:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .credits {
+    padding-top: .2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: gray;
+  }
+  
+  .credits a {
+    color: gray;
+    text-decoration: underline;
+  }

@@ -1,3 +1,4 @@
+import Photo from 'components/photo';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -34,33 +35,7 @@ const Home: NextPage = () => {
         </div>
         <div className={styles['grid-container']}>
           {photos.map((photo: UnsplashPhoto) => (
-            <article key={photo.id} className={styles.item}>
-              <div
-                className={styles.cover}
-                title={photo.description ?? photo.alt_description ?? ''}
-                style={{
-                  backgroundImage: `url(${photo.urls.regular})`,
-                }}
-              ></div>
-              <div className={styles.credits}>
-                Photo by{' '}
-                <a
-                  href={photo.user.links.html}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {photo.user.name}
-                </a>{' '}
-                on{' '}
-                <a
-                  href={'https://unsplash.com'}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Unsplash
-                </a>
-              </div>
-            </article>
+            <Photo key={photo.id} photo={photo} />
           ))}
         </div>
       </main>
