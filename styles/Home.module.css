@@ -2,13 +2,90 @@
   padding: 0 2rem;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.search {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+  gap: .5rem;
 }
 
+.search input[type="search"] {
+  padding: .5rem;
+  border: 1px solid silver;
+  border-radius: .5rem;
+}
+
+.search button {
+  padding: .5rem;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: 1px solid silver;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: whitesmoke;
+}
+
+.grid-container {
+  position: relative;
+  display: grid;
+  margin: 1rem 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.item {
+  border-radius: 0.5rem;
+  border-width: 2px;
+}
+
+.cover {
+  position: relative;
+  margin: auto;
+  padding-bottom: 100%;
+  border-radius: 0.3rem;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+
+.cover:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1600px) {
+  .grid-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .grid-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-container {
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .grid-container {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+}
