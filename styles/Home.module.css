@@ -60,6 +60,18 @@
   cursor: pointer;
 }
 
+.credits {
+  padding-top: .2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.credits a {
+  color: gray;
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 1600px) {
   .grid-container {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
