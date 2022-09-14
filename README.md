@@ -39,17 +39,17 @@ Navigate to `http://localhost:3000`
 The app is configured to be hosted on cPanel.
 If you want to deploy it on Vercel, you need to make some changes to it.
 
-- delete the custom server file: `server.js`
-- revert the the `start` script in the `package.json` to its initial value, `next start`
+- Delete the custom server file: `server.js`
+- Revert the the `start` script in the `package.json` to its initial value, `next start`
 
 ### Configuration
 
-In order to use the Unsplash API, you need to have an [Unsplash Developer](https://unsplash.com/developers) Account.
+In order to use the Unsplash API, you need to have a Developer Account on [Unsplash](https://unsplash.com/developers).  
 
-- Create an Account on [Unsplash Developers](https://unsplash.com/developers)
-- Create a New Application
+- Create a Developer Account on [Unsplash](https://unsplash.com/join)
+- Create a [New Application](https://unsplash.com/oauth/applications)
 - Generate a Token as described in the [Unsplash Documentation](https://unsplash.com/documentation/user-authentication-workflow)
-- Open the `.env` file and set the value of the `UNSPLASH_TOKEN` variable to the newly generated token
+- Open the `.env` file and set the value of the `UNSPLASH_TOKEN` variable to the newly generated Token
 
 ### Further help
 
