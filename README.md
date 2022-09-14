@@ -2,6 +2,10 @@
 
 Testing the Unsplash API
 
+## Screenshots
+
+![Desktop Screenshot](./screenshots/desktop.png)
+
 ## Help
 
 [Next.js - Documentation](https://nextjs.org/docs)  
