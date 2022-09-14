@@ -36,7 +36,7 @@ Navigate to `http://localhost:3000`.
 
 ### Further help
 
-[React - Getting Started](https://reactjs.org/docs/getting-started.html)
+[React - Getting Started](https://reactjs.org/docs/getting-started.html)  
 [Next.js - Documentation](https://nextjs.org/docs)  
 [Unsplash Developers - Documentation](https://unsplash.com/documentation)  
 [Unsplash Developers - User Authentication Workflow](https://unsplash.com/documentation/user-authentication-workflow)  
