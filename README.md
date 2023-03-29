@@ -36,8 +36,18 @@ Navigate to `http://localhost:3000`
 
 ### Deployment
 
-The app is configured to be hosted on cPanel.
-If you want to deploy it on Vercel, you need to make some changes to it.
+#### The app is configured to be hosted on cPanel
+
+- Push the latest changes to the repository where the app is hosted
+- Update the checked out branch
+- Create a new Node.js application
+- Copy the .next folder in the root directory of the app
+- Install the dependencies
+- Configure the environment variables
+- Start the app
+- Enjoy
+
+#### If you want to deploy it on Vercel, you need to make some changes to it
 
 - Delete the custom server file: `server.js`
 - Revert the the `start` script in the `package.json` to its initial value, `next start`
