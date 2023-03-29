@@ -12,10 +12,12 @@ const Home: NextPage = () => {
   const [query, setQuery] = useState('');
 
   async function fetchPhotos() {
-    setIsloading(true);
-    const response = await fetch(`/api/search/${query}`);
-    const data: UnsplashPhotosResponse = await response.json();
-    setPhotos(data.results);
+    if (query.trim().length > 0) {
+      setIsloading(true);
+      const response = await fetch(`/api/search/${query}`);
+      const data: UnsplashPhotosResponse = await response.json();
+      setPhotos(data.results);
+    }
   }
 
   useEffect(() => {
@@ -105,7 +107,12 @@ const Home: NextPage = () => {
                 onInput={(e) => setQuery(e.currentTarget.value)}
                 onKeyUp={(e) => (e.key === 'Enter' ? fetchPhotos() : null)}
               />
-              <button onClick={fetchPhotos}>Search</button>
+              <button
+                onClick={fetchPhotos}
+                disabled={query.trim().length === 0}
+              >
+                Search
+              </button>
             </div>
             <div className={styles['grid-container']}>
               {photos.map((photo: UnsplashPhoto) => (
